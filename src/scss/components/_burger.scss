@@ -1,0 +1,19 @@
+@use "../utils/variables" as *;
+@use "../abstract/mixins" as *;
+
+.burger {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  background-color: $color-btn-background;
+  border-radius: $spacing-sm;
+  padding: $spacing-sm;
+
+  @include media-tablet {
+    display: inline-block;
+  }
+
+  &:active {
+    background-color: $color-primary;
+  }
+}

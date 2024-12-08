@@ -1,0 +1,22 @@
+@use "normalize.css";
+
+@use './layout/columns';
+@use './layout/wrapper';
+@use './layout/footer';
+
+@use "./components/buttons";
+@use './components/header';
+@use './components/burger';
+@use './components/hero';
+@use './components/tools';
+@use './components/strategies';
+@use './components/contact-us';
+
+@use "./abstract/placeholders";
+@use "./abstract/mixins";
+
+@use "./base/base";
+@use './base/tags';
+
+@use './utils/variables' as *;
+@use './utils/typography';

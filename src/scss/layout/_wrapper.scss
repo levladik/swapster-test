@@ -1,0 +1,15 @@
+@use '../abstract/mixins' as *;
+@use '../utils/variables' as *;
+
+.wrapper {
+	max-width: $content-width;
+	margin: auto;
+	padding: 0 60px;
+
+	@include media-tablet {
+		padding: 0 20px;		
+	}
+	@include media-mobile {
+		padding: 0 10px;
+	}
+}

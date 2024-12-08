@@ -1,0 +1,72 @@
+@use "../utils/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/placeholders" as *;
+
+header {
+  padding: 20px 0;
+  position: relative;
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      @include font(3rem, 2.6rem, normal);
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .nav__wrapper {
+      display: flex;
+
+      @include media-tablet {
+        flex-direction: column;
+        position: absolute;
+        right: 10px;
+        top: -900px;
+        text-align: end;
+        background: $color-tag-colored;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      ul {
+        display: flex;
+        gap: 10px;
+        margin: 0 10px;
+
+        @include media-tablet {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+
+        .nav-link {
+          display: block;
+          color: $color-text;
+          text-decoration: none;
+          cursor: pointer;
+          @extend %transition;
+          padding: 10px;
+          border-radius: $spacing-sm;
+
+          &:hover {
+            background-color: color-mix(
+              in srgb,
+              $color-btn-background 90%,
+              transparent 100%
+            );
+          }
+        }
+      }
+    }
+
+    .header__buttons {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}

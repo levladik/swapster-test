@@ -1,0 +1,61 @@
+@use "../utils/variables" as *;
+@use "../abstract/mixins" as *;
+
+.hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    min-width: 565px;
+
+    @include media-tablet {
+      order: 1;
+      width: 100%;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .hero__save {
+      @include font(1.2rem, 2rem, normal);
+      white-space: nowrap;
+      width: fit-content;
+      padding: $spacing-sm $spacing-lg $spacing-sm $spacing-sm;
+      background-color: $color-btn-background;
+      border-radius: $spacing-lg;
+
+      span {
+        background-color: white;
+        color: $color-background;
+        padding: $spacing-sm $spacing-lg;
+        border-radius: $spacing-lg;
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      @include font(2.6rem, 2.8rem, normal);
+    }
+
+    button {
+      @include media-tablet {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  img {
+    @include media-tablet {
+      width: 70%;
+      margin-bottom: 30px;
+    }
+  }
+}

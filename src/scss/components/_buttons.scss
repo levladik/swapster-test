@@ -1,0 +1,48 @@
+@use '../utils/variables' as *;
+@use '../abstract/mixins' as *;
+
+button {
+  width: fit-content;
+  border-radius: $spacing-sm;
+  border: 1px solid transparent;
+  padding: $spacing-sm $spacing-md;
+  background-color: $color-btn-background;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: color-mix(in srgb, $color-btn-background 90%, transparent 100%);
+}
+
+button:active {
+  transform: scale(0.95);
+  border-color: $color-primary;
+}
+
+.btn-color {
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: color-mix(in srgb, $color-primary 90%, transparent 100%);
+  }
+
+  &:active {
+    border-color: white;
+  }
+}
+
+.btn-accent {
+  @include font(2.6rem, 2.6rem, bold);
+  background: linear-gradient(to right, $color-primary, $color-secondary);
+  border-radius: $spacing-md;
+  padding: $spacing-md $spacing-lg;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.05;
+  }
+
+  &:active {
+    scale: 0.98;
+  }
+}

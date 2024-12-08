@@ -1,0 +1,87 @@
+@use "../utils/variables" as *;
+@use "../abstract/mixins" as *;
+
+.tools__title {
+  max-width: 462px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.tools__button {
+  margin-top: 60px;
+  text-align: center;
+  @include media-mobile {
+    margin-top: 0;
+  }
+}
+
+// Tool block
+.tool-container {
+  @include media-tablet {
+    flex-wrap: wrap;
+    > .tool {
+      flex-basis: 43%;
+      margin-bottom: 40px;
+    }
+  }
+  @include media-mobile {
+    > .tool {
+      flex-basis: 100%;
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.tool {
+  @include media-tablet {
+    text-align: center;
+  }
+}
+
+.tool__icon {
+  margin-bottom: 30px;
+}
+
+.tool__title {
+  margin: 0 0 16px;
+}
+
+.ico {
+  cursor: pointer;
+}
+
+.icon-square {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-btn-background;
+  filter: drop-shadow(0px 0px 5px $color-primary);
+}
+
+.ico__clock {
+  background-image: url("/icons/clock.svg");
+  width: 15px;
+  height: 19px;
+}
+
+.ico__arrow {
+  background-image: url("/icons/arrow.svg");
+  width: 12px;
+  height: 17px;
+}
+
+.ico__snake {
+  background-image: url("/icons/snake.svg");
+  width: 18px;
+  height: 14px;
+}
+
+.ico__heart {
+  background-image: url("/icons/heart.svg");
+  width: 17px;
+  height: 15px;
+}

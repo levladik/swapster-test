@@ -1,0 +1,125 @@
+@use '../utils/variables' as *;
+@use '../abstract/mixins' as *;
+
+.contact-us {
+  background-color: $color-background;
+  padding: 62px 0;
+
+  @include media-tablet {
+    text-align: center;
+  }
+
+  &-container {
+    @include media-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin: 0 0 17px;
+  }
+
+  &__content {
+    max-width: 520px;
+
+    @include media-tablet {
+      max-width: 100%;
+      margin-bottom: 52px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 34px;
+  }
+
+  &__link {
+    margin: 0 0 19px;
+    display: flex;
+    align-items: center;
+    @include font(2.5rem, 2.6rem, normal);
+
+    @include media-tablet {
+      justify-content: center;
+    }
+
+    a {
+      margin-left: 11px;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    input,
+    textarea {
+      border: 1px solid $color-primary;
+      background-color: $color-btn-background;
+      padding: 10px 21px;
+      border-radius: 5px;
+
+      &:focus {
+        border-color: white;
+        outline: none;
+      }
+
+      @include media-mobile {
+        width: 85%;
+      }
+    }
+
+    textarea {
+      resize: none;
+      width: 90%;
+      height: 160px;
+      margin-bottom: 20px;
+
+      @include media-mobile {
+        width: 85%;
+      }
+    }
+  }
+
+  &__line {
+    margin-bottom: 19px;
+
+    > * {
+      width: 41%;
+    }
+
+    @include media-laptop {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      > * {
+        margin-bottom: 19px;
+        width: 90%;
+      }
+    }
+  }
+
+  &__button {
+    > * {
+      min-width: 117px;
+    }
+
+    @include media-mobile {
+      margin-top: 24px;
+    }
+  }
+}
+
+.ico__letter {
+	background-image: url("/icons/ico_mail.svg");
+	width: 25px;
+	height: 20px;
+}
+
+.ico__phone {
+	background-image: url("/icons/ico_phone.svg");
+	width: 25px;
+	height: 25px;
+}
