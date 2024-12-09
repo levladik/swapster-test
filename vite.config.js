@@ -1,10 +1,11 @@
-import { defineConfig } from 'vite'; // Импортируйте defineConfig
+import { defineConfig } from 'vite';
 
 export default defineConfig({
+  build: {
+    manifest: true
+  },
+  base: '/assets/',
   css: {
     devSourcemap: true, // Включение карты стилей в режиме разработки
-  },
-  build: {
-    sourcemap: true, // Включение карты стилей в режиме сборки
   },
 });
