@@ -4,7 +4,7 @@ export default defineConfig({
   build: {
     manifest: true
   },
-  base: '/assets/',
+  base: '/swapster-test/',
   css: {
     devSourcemap: true, // Включение карты стилей в режиме разработки
   },
